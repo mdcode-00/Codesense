@@ -1,0 +1,11 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white; /* optional but usually needed */
+}
+
+#root {
+  min-height: 100vh;
+  background-color: black;
+}
