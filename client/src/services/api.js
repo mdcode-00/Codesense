@@ -1,7 +1,9 @@
 import axios from 'axios'
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
 export const getCodeReview = async(repo , prNumber , token) => {
-  const response = await axios.post('http://localhost:4000/api/review/',{
+  const response = await axios.post(`${BASE_URL}/api/review/`,{
     repo,
     prNumber,
     token
@@ -10,6 +12,6 @@ export const getCodeReview = async(repo , prNumber , token) => {
 }
 
 export const getHistory = async() => {
-  const response = await axios.get('http://localhost:4000/api/review/')
+  const response = await axios.get(`${BASE_URL}/api/review/`)
   return response.data
 }
