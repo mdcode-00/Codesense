@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 export const getCodeReview = async(repo , prNumber , token) => {
   const response = await axios.post(`${BASE_URL}/api/review/`,{
